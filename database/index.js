@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const connectionString =
-  "mongodb+srv://sp19bscs0038:ansari123@cluster0.mgcjt2g.mongodb.net/coinbounce";
+const { MONGODB_CONNECTION_STRING } = require("../config/index");
+const connectionString = MONGODB_CONNECTION_STRING;
 const dbConnection = async () => {
   try {
     const conn = await mongoose.connect(connectionString);
