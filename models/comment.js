@@ -3,7 +3,7 @@ const { schema } = require("./blog");
 
 const { Schema } = mongoose;
 
-const commentSchema = new schema(
+const commentSchema = new Schema(
   {
     content: { type: String, required: true },
     blog: { type: mongoose.SchemaTypes.ObjectId, ref: "blog" },
